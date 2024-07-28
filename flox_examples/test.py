@@ -2,15 +2,15 @@ import argparse
 from pathlib import Path
 
 import torch
-from flox.data.utils import federated_split
 from torch import nn
 from torch.nn import functional as F
 from torchvision import transforms
 from torchvision.datasets import FashionMNIST
 
 import flox
-from flox.learn import FloxModule
+from flox.data.utils import federated_split
 from flox.federation.topologies import two_tier_topology
+from flox.learn import FloxModule
 
 
 class Net(FloxModule):

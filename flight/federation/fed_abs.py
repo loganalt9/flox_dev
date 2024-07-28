@@ -6,11 +6,12 @@ from flight.strategies.aggr import AggrStrategy
 from flight.strategies.coord import CoordStrategy
 from flight.strategies.trainer import TrainerStrategy
 from flight.strategies.worker import WorkerStrategy
+
+from ..learning.datasets import DataLoadable
 from .jobs.types import Result, TrainJob, TrainJobArgs
 from .jobs.work import default_training_job
 from .topologies.node import Node
 from .topologies.topo import Topology
-from ..learning.datasets import DataLoadable
 
 if t.TYPE_CHECKING:
     from .fed_sync import Engine

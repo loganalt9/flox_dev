@@ -3,14 +3,15 @@ import typing as t
 from concurrent.futures import Future
 
 from flox.federation.topologies import Node, NodeKind
-from .fed_abs import Federation
-from .topologies.topo import Topology
+
 from ..learning.datasets import DataLoadable
 from ..learning.module import Trainable
 from ..strategies.base import Strategy
+from .fed_abs import Federation
+from .topologies.topo import Topology
 
 if t.TYPE_CHECKING:
-    from .jobs.types import Result, AggrJobArgs
+    from .jobs.types import AggrJobArgs, Result
 
     Engine: t.TypeAlias = t.Any
 

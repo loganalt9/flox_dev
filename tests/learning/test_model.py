@@ -1,7 +1,7 @@
 import pytest
 import torch
 
-from flight.learning.torch import FlightModule
+from flight.learning.mytorch import FlightModule
 
 
 @pytest.fixture
@@ -28,7 +28,7 @@ def valid_module():
 
 @pytest.fixture
 def invalid_module():
-    class TestModule(FlightModule): # noqa
+    class TestModule(FlightModule):  # noqa
         def __init__(self):
             super().__init__()
             self.model = torch.nn.Sequential(

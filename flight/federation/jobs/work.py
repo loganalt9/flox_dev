@@ -1,6 +1,5 @@
 import typing as t
 
-
 if t.TYPE_CHECKING:
     from flight.federation.jobs.types import Result, TrainJobArgs
 
